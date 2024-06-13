@@ -1,0 +1,10 @@
+FROM docker.io/node:22.3
+
+LABEL description="A demo Dockerfile for build Docsify."
+LABEL maintainer="mingzhebaosheng"
+ENV version="v4.13.1"
+
+WORKDIR /docs
+RUN npm install -g docsify-cli@v4.13.1
+EXPOSE 3000/tcp
+ENTRYPOINT docsify serve .
