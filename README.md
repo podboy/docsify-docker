@@ -1,6 +1,6 @@
 # docsify docker
 
-Build Docsify Docker Image.
+> Build Docsify Docker Image.
 
 ## Introduction
 
@@ -14,7 +14,7 @@ The image is created by and maintained by [zoumingzhe](https://github.com/zoumin
 ## Usage
 
 ```shell
-docker pull docker.io/mingzhebaosheng/docsify:latest -p 3000:3000 -v $(pwd):/docs
+docker pull docker.io/mingzhebaosheng/docsify:latest -p 3000:3000 -v $(pwd)/example:/docs:ro
 ```
 
 docker-compose:
@@ -31,5 +31,5 @@ services:
     ports:
       - ${APP_PORT:-3000}:3000
     volumes:
-      - ./tests:/docs
+      - ./example:/docs:ro
 ```
