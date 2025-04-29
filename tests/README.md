@@ -1,4 +1,0 @@
-Hello
-=====
-
-Hello the world!
